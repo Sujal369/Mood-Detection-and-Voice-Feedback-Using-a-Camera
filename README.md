@@ -45,3 +45,35 @@ Copy code
 ├── mood_detector.py  # Main Python script
 ├── README.md         # Project documentation
 └── requirements.txt  # List of dependencies
+
+Usage:
+Run the script and allow camera access.
+The camera will capture your face and analyze your facial expressions.
+The dominant emotion (mood) will be detected and spoken aloud.
+Press 'q' to exit.
+Dependencies:
+Python 3.x
+OpenCV
+pyttsx3
+DeepFace
+Troubleshooting:
+Camera not working: Ensure that the camera is properly connected and accessible. You can try running a simple OpenCV script to check the camera.
+
+python
+Copy code
+import cv2
+cap = cv2.VideoCapture(0)
+ret, frame = cap.read()
+if ret:
+    print("Camera is working")
+cap.release()
+DeepFace error: If DeepFace doesn't detect the face or returns an error, make sure you have a clear image of the face in the camera's frame and the model is working properly.
+
+License:
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Contributing:
+Contributions are welcome! Please feel free to submit a Pull Request if you have any suggestions or improvements.
+
+Author:
+Sujal Lothe
